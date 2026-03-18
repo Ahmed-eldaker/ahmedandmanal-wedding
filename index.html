@@ -1,0 +1,1124 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>حفل زفاف أحمد & منال</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --cream: #ffffff;
+        --gold: #285a48;
+        --red: #bf4646;
+        --cream-dark: #f3e3d0;
+        --gold-light: #285a48;
+        --text-dark: #2d4a3e;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--cream);
+        font-family: "Amiri", serif;
+        color: var(--text-dark);
+        overflow-x: hidden;
+      }
+
+      /* ─── SECTION 1: HERO ─── */
+      #hero {
+        min-height: 100vh;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      /* Decorative petals */
+      #hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            ellipse at 20% 20%,
+            rgba(236, 231, 209, 0.12) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse at 80% 80%,
+            rgba(236, 231, 209, 0.1) 0%,
+            transparent 50%
+          );
+        pointer-events: none;
+      }
+      img {
+        width: 100%;
+      }
+      .petal {
+        position: absolute;
+        width: 10px;
+        height: 16px;
+        border-radius: 50% 50% 50% 0;
+        background: rgba(236, 231, 209, 0.18);
+        animation: fall linear infinite;
+      }
+
+      @keyframes fall {
+        0% {
+          transform: translateY(-60px) rotate(0deg);
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+        }
+        90% {
+          opacity: 0.8;
+        }
+        100% {
+          transform: translateY(110vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+      .hero-heart {
+        font-size: 3.5rem;
+        color: #bf4646;
+        animation: heartbeat 1.6s ease-in-out infinite;
+        margin-bottom: 0.5rem;
+        filter: drop-shadow(0 0 16px rgba(191, 70, 70, 0.5));
+        line-height: 1;
+      }
+
+      @keyframes heartbeat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        14% {
+          transform: scale(1.18);
+        }
+        28% {
+          transform: scale(1);
+        }
+        42% {
+          transform: scale(1.12);
+        }
+        56% {
+          transform: scale(1);
+        }
+      }
+
+      .hero-subtitle {
+        font-family: "Cormorant Garamond", serif;
+        font-style: italic;
+        color: black;
+        font-size: 1.1rem;
+        letter-spacing: 0.15em;
+        margin-bottom: 1.2rem;
+        animation: fadeUp 1s ease 0.3s both;
+      }
+
+      .hero-names {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(3rem, 10vw, 6rem);
+        color: black;
+        line-height: 1.1;
+        animation: fadeUp 1s ease 0.5s both;
+        text-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+      }
+
+      .hero-names .amp {
+        color: #bf4646;
+        font-style: italic;
+        font-size: 0.7em;
+      }
+
+      .hero-tagline {
+        font-family: "Amiri", serif;
+        color: rgba(45, 74, 62, 0.75);
+        font-size: 1.15rem;
+        margin-top: 1rem;
+        letter-spacing: 0.05em;
+        animation: fadeUp 1s ease 0.7s both;
+      }
+
+      .scroll-btn {
+        margin-top: 2.5rem;
+        padding: 0.85rem 2.8rem;
+        border: 2px solid #408a71;
+        background: transparent;
+        color: #285a48;
+        font-family: "Amiri", serif;
+        font-size: 1.1rem;
+        letter-spacing: 0.12em;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: all 0.35s ease;
+        animation: fadeUp 1s ease 0.9s both;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .scroll-btn::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: #408a71;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.35s ease;
+        z-index: 0;
+      }
+
+      .scroll-btn:hover::before {
+        transform: scaleX(1);
+      }
+      .scroll-btn:hover {
+        color: white;
+      }
+      .scroll-btn span {
+        position: relative;
+        z-index: 1;
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* ─── SECTION 2: INVITATION ─── */
+      #invitation {
+        background: var(--cream);
+        padding: 80px 20px;
+        text-align: center;
+        position: relative;
+      }
+
+      .bismillah {
+        font-family: "Amiri", serif;
+        font-size: clamp(1.6rem, 4vw, 2.4rem);
+        color: var(--gold);
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.05em;
+      }
+
+      .section-ornament {
+        color: var(--red);
+        font-size: 1.4rem;
+        margin: 0.5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.6rem;
+      }
+      .section-ornament::before,
+      .section-ornament::after {
+        content: "";
+        display: inline-block;
+        width: 60px;
+        height: 1px;
+        background: linear-gradient(to right, transparent, var(--gold));
+      }
+      .section-ornament::after {
+        background: linear-gradient(to left, transparent, var(--gold));
+      }
+
+      .hafl-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2rem, 6vw, 3.5rem);
+        color: var(--gold);
+        margin: 0.8rem 0;
+      }
+
+      .invite-names {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(1.8rem, 5vw, 3rem);
+        color: var(--text-dark);
+        margin: 0.5rem 0 1.2rem;
+      }
+      .invite-names .amp {
+        color: var(--red);
+        font-style: italic;
+      }
+
+      .welcome-text {
+        font-family: "Amiri", serif;
+        font-size: 1.2rem;
+        color: var(--text-dark);
+        max-width: 600px;
+        margin: 0 auto 2.5rem;
+        line-height: 2;
+        opacity: 0.85;
+      }
+
+      .couple-photo {
+        width: min(400px, 90vw);
+        height: min(400px, 90vw);
+        border-radius: 50%;
+        object-fit: cover;
+        border: 6px solid #408a71;
+        box-shadow: 0 12px 40px rgba(64, 138, 113, 0.25);
+        margin: 0 auto;
+        display: block;
+        background: linear-gradient(
+          135deg,
+          var(--cream-dark),
+          var(--gold-light)
+        );
+        position: relative;
+      }
+
+      .photo-placeholder {
+        width: min(400px, 90vw);
+        height: min(400px, 90vw);
+        border-radius: 50%;
+        border: 6px solid #408a71;
+        box-shadow: 0 12px 40px rgba(64, 138, 113, 0.25);
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background: linear-gradient(135deg, #f3e3d0, #e8d9c5);
+        color: var(--gold);
+        font-size: 4rem;
+        gap: 0.5rem;
+      }
+
+      .photo-placeholder p {
+        font-size: 0.9rem;
+        font-family: "Amiri", serif;
+        color: var(--gold);
+        opacity: 0.7;
+        overflow: hidden;
+      }
+
+      .photo-placeholder img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      /* ─── SECTION 3: DETAILS ─── */
+      #details {
+        background: white;
+        padding: 70px 20px;
+        text-align: center;
+      }
+
+      .details-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2rem;
+        max-width: 800px;
+        margin: 2.5rem auto 0;
+      }
+
+      .detail-card {
+        background: white;
+        border: 1px solid rgba(64, 138, 113, 0.2);
+        border-radius: 20px;
+        padding: 2.5rem 2rem;
+        color: #285a48;
+        backdrop-filter: blur(4px);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .detail-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+      }
+
+      .detail-icon {
+        font-size: 2.8rem;
+        margin-bottom: 0.8rem;
+        display: block;
+        color: #bf4646;
+      }
+
+      .detail-label {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 0.85rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        opacity: 0.7;
+        margin-bottom: 0.5rem;
+      }
+
+      .detail-value {
+        font-family: "Playfair Display", serif;
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+
+      .detail-sub {
+        font-family: "Amiri", serif;
+        font-size: 1rem;
+        opacity: 0.75;
+        margin-top: 0.3rem;
+      }
+
+      /* ─── SECTION 4: COUNTDOWN ─── */
+      #countdown {
+        background: var(--cream);
+        padding: 80px 20px;
+        text-align: center;
+      }
+
+      .countdown-title {
+        font-family: "Amiri", serif;
+        font-size: 1.1rem;
+        color: var(--gold);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+
+      .countdown-heading {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        color: var(--gold);
+        margin-bottom: 0.5rem;
+      }
+
+      .clock-icon {
+        font-size: 3rem;
+        color: var(--red);
+        animation: spin-slow 8s linear infinite;
+        display: inline-block;
+        margin-bottom: 1rem;
+      }
+
+      @keyframes spin-slow {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .countdown-grid {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+      }
+
+      .countdown-box {
+        background: #408a71;
+        color: white;
+        border-radius: 16px;
+        padding: 1.2rem 1.5rem;
+        min-width: 90px;
+        box-shadow: 0 8px 24px rgba(64, 138, 113, 0.25);
+        transition: transform 0.2s ease;
+      }
+
+      .countdown-box:hover {
+        transform: scale(1.05);
+      }
+
+      .countdown-num {
+        font-family: "Playfair Display", serif;
+        font-size: 2.8rem;
+        font-weight: 700;
+        line-height: 1;
+        display: block;
+      }
+
+      .countdown-label {
+        font-family: "Amiri", serif;
+        font-size: 0.85rem;
+        opacity: 0.8;
+        margin-top: 0.3rem;
+        display: block;
+      }
+
+      /* ─── SECTION 5: OUR STORY ─── */
+      #story {
+        background: white;
+        padding: 90px 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      #story::before {
+        content: "❦";
+        position: absolute;
+        font-size: 30rem;
+        color: rgba(191, 70, 70, 0.03);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+
+      .story-tag {
+        font-family: "Cormorant Garamond", serif;
+        font-style: italic;
+        color: rgba(64, 138, 113, 0.7);
+        font-size: 1rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+
+      .story-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2.2rem, 6vw, 4rem);
+        color: #285a48;
+        margin-bottom: 2rem;
+        position: relative;
+        display: inline-block;
+      }
+
+      .story-title::after {
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 2px;
+        background: #bf4646;
+      }
+
+      .story-text {
+        font-family: "Amiri", serif;
+        font-size: 1.25rem;
+        color: rgba(45, 74, 62, 0.85);
+        max-width: 680px;
+        margin: 2.5rem auto 0;
+        line-height: 2.2;
+      }
+
+      .story-hearts {
+        color: #bf4646;
+        font-size: 1.5rem;
+        margin: 1.5rem 0;
+        letter-spacing: 0.5rem;
+        animation: heartbeat 1.8s ease-in-out infinite;
+      }
+
+      /* ─── SECTION 6: GALLERY ─── */
+      #gallery {
+        background: var(--cream);
+        padding: 80px 20px;
+        text-align: center;
+      }
+
+      .section-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(1.8rem, 4vw, 3rem);
+        color: var(--gold);
+        margin-bottom: 0.5rem;
+      }
+
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.2rem;
+        max-width: 800px;
+        margin: 2.5rem auto 0;
+      }
+
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+        aspect-ratio: 1;
+        background: linear-gradient(
+          135deg,
+          var(--cream-dark),
+          var(--gold-light)
+        );
+        cursor: pointer;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        transition:
+          transform 0.35s ease,
+          box-shadow 0.35s ease;
+      }
+
+      .gallery-item:first-child {
+        grid-column: span 2;
+        aspect-ratio: 16/9;
+      }
+      a {
+        cursor: pointer;
+        text-decoration: none;
+        color: (var(--red));
+      }
+
+      .gallery-item:hover {
+        transform: scale(1.02);
+        box-shadow: 0 12px 32px rgba(64, 138, 113, 0.2);
+      }
+
+      .gallery-placeholder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.5rem;
+        color: var(--gold);
+        font-size: 3rem;
+      }
+
+      .gallery-placeholder span {
+        font-size: 0.85rem;
+        font-family: "Amiri", serif;
+        opacity: 0.6;
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s ease;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.06);
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(64, 138, 113, 0.6),
+          transparent
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+      }
+
+      /* ─── SECTION 7: LOCATION ─── */
+      #location {
+        background: white;
+        padding: 80px 20px;
+        text-align: center;
+      }
+
+      .location-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(1.8rem, 4vw, 3rem);
+        color: #285a48;
+        margin-bottom: 0.5rem;
+      }
+
+      .location-card {
+        background: white;
+        border: 1px solid rgba(64, 138, 113, 0.2);
+        border-radius: 24px;
+        padding: 3rem 2rem;
+        max-width: 500px;
+        margin: 2.5rem auto;
+        color: #285a48;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      .location-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        color: #bf4646;
+      }
+
+      .location-name {
+        font-family: "Playfair Display", serif;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .location-detail {
+        font-family: "Amiri", serif;
+        font-size: 1.1rem;
+        opacity: 0.8;
+        margin-bottom: 0.3rem;
+        line-height: 1.8;
+      }
+
+      .maps-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        margin-top: 1.8rem;
+        padding: 0.9rem 2.4rem;
+        background: #408a71;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-family: "Amiri", serif;
+        font-size: 1.1rem;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 20px rgba(64, 138, 113, 0.35);
+      }
+
+      .maps-btn:hover {
+        background: #285a48;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 28px rgba(64, 138, 113, 0.45);
+      }
+
+      /* ─── SECTION 8: THANK YOU ─── */
+      #thankyou {
+        background: var(--cream);
+        padding: 100px 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      #thankyou::before {
+        content: "♡";
+        position: absolute;
+        font-size: 40rem;
+        color: rgba(191, 70, 70, 0.04);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+
+      .thankyou-icon {
+        font-size: 4rem;
+        color: var(--red);
+        animation: heartbeat 1.6s ease-in-out infinite;
+        display: block;
+        margin-bottom: 1rem;
+      }
+
+      .thankyou-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2rem, 6vw, 4rem);
+        color: var(--gold);
+        margin-bottom: 1rem;
+      }
+
+      .thankyou-text {
+        font-family: "Amiri", serif;
+        font-size: 1.2rem;
+        color: var(--text-dark);
+        max-width: 580px;
+        margin: 0 auto 2rem;
+        line-height: 2.1;
+        opacity: 0.85;
+      }
+
+      .footer-names {
+        font-family: "Playfair Display", serif;
+        font-style: italic;
+        font-size: 1.8rem;
+        color: var(--gold);
+        margin-top: 1.5rem;
+      }
+
+      .footer-names .amp {
+        color: var(--red);
+      }
+
+      .footer-bar {
+        margin-top: 3rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--cream-dark);
+        font-family: "Cormorant Garamond", serif;
+        color: var(--gold);
+        font-size: 0.9rem;
+        opacity: 0.6;
+        letter-spacing: 0.1em;
+      }
+
+      /* ─── SCROLL REVEAL ─── */
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+
+      .reveal.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ─── SECTION DIVIDERS ─── */
+      .divider {
+        text-align: center;
+        color: var(--red);
+        font-size: 1.6rem;
+        letter-spacing: 0.8rem;
+        margin: 0.5rem 0;
+      }
+
+      /* Responsive */
+      @media (max-width: 480px) {
+        .gallery-grid {
+          grid-template-columns: 1fr;
+        }
+        .gallery-item:first-child {
+          grid-column: span 1;
+          aspect-ratio: 4/3;
+        }
+        .countdown-box {
+          min-width: 70px;
+          padding: 1rem;
+        }
+        .countdown-num {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ══════════ SECTION 1: HERO ══════════ -->
+    <section id="hero">
+      <!-- Falling petals -->
+      <div
+        class="petal"
+        style="
+          left: 5%;
+          animation-duration: 7s;
+          animation-delay: 0s;
+          width: 8px;
+          height: 14px;
+          transform: rotate(20deg);
+        "
+      ></div>
+      <div
+        class="petal"
+        style="
+          left: 15%;
+          animation-duration: 9s;
+          animation-delay: 1s;
+          width: 11px;
+          height: 18px;
+          transform: rotate(-15deg);
+        "
+      ></div>
+      <div
+        class="petal"
+        style="
+          left: 30%;
+          animation-duration: 6s;
+          animation-delay: 2.5s;
+          width: 7px;
+          height: 12px;
+          transform: rotate(40deg);
+        "
+      ></div>
+      <div
+        class="petal"
+        style="
+          left: 45%;
+          animation-duration: 11s;
+          animation-delay: 0.5s;
+          width: 9px;
+          height: 16px;
+          transform: rotate(-30deg);
+        "
+      ></div>
+      <div
+        class="petal"
+        style="
+          left: 60%;
+          animation-duration: 8s;
+          animation-delay: 3s;
+          width: 10px;
+          height: 17px;
+          transform: rotate(10deg);
+        "
+      ></div>
+      <div
+        class="petal"
+        style="
+          left: 75%;
+          animation-duration: 7.5s;
+          animation-delay: 1.5s;
+          width: 8px;
+          height: 13px;
+          transform: rotate(-45deg);
+        "
+      ></div>
+      <div
+        class="petal"
+        style="
+          left: 88%;
+          animation-duration: 10s;
+          animation-delay: 4s;
+          width: 12px;
+          height: 19px;
+          transform: rotate(25deg);
+        "
+      ></div>
+      <div
+        class="petal"
+        style="
+          left: 93%;
+          animation-duration: 6.5s;
+          animation-delay: 2s;
+          width: 7px;
+          height: 12px;
+          transform: rotate(-20deg);
+        "
+      ></div>
+
+      <div class="hero-heart">♥</div>
+      <div class="hero-subtitle">حفل زفاف</div>
+      <h1 class="hero-names">أحمد <span class="amp">&amp;</span> منال</h1>
+      <p class="hero-tagline">يسعدانكم بدعوتكم لحضور حفل زفافهما</p>
+      <button
+        class="scroll-btn"
+        onclick="
+          document
+            .getElementById('invitation')
+            .scrollIntoView({ behavior: 'smooth' })
+        "
+      >
+        <span>تفاصيل الحفل ↓</span>
+      </button>
+    </section>
+
+    <!-- ══════════ SECTION 2: INVITATION ══════════ -->
+    <section id="invitation">
+      <div class="reveal">
+        <p class="bismillah">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ</p>
+        <div class="section-ornament">♥</div>
+        <div class="divider">✦ ✦ ✦</div>
+
+        <h2 class="hafl-title">حفل زفاف</h2>
+        <h3 class="invite-names">أحمد <span class="amp">&amp;</span> منال</h3>
+
+        <p class="welcome-text">
+          يتشرف العروسان بدعوتكم الكريمة لمشاركتهما فرحة هذه المناسبة
+          السعيدة،<br />
+          ويأملان أن يجمعهم بكم حضوركم في هذا اليوم المبارك الجميل.<br />
+          <em>أهلاً وسهلاً بكل من أحب</em>
+        </p>
+
+        <!-- Photo placeholder — replace src with real photo -->
+        <div class="photo-placeholder" id="couplephoto">
+          <img src="our-photo.jpeg" alt="صورة العروسين" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ SECTION 3: DATE & LOCATION ══════════ -->
+    <section id="details">
+      <div class="reveal">
+        <p class="countdown-title" style="color: var(--gold)">تفاصيل الحفل</p>
+        <h2 class="hafl-title" style="color: var(--cream)">الموعد والمكان</h2>
+        <div class="divider" style="color: rgba(236, 231, 209, 0.5)">✦ ✦ ✦</div>
+
+        <div class="details-grid">
+          <div class="detail-card">
+            <span class="detail-icon">📍</span>
+            <p class="detail-label">المكان</p>
+            <p class="detail-value">الزقازيق</p>
+            <p class="detail-sub">محافظة الشرقية، مصر</p>
+            <a href="#location">Go to Location</a>
+          </div>
+          <div class="detail-card">
+            <span class="detail-icon">🗓️</span>
+            <p class="detail-label">التاريخ والوقت</p>
+            <p class="detail-value">٢٤ مارس ٢٠٢٦</p>
+            <p class="detail-sub">الساعة ٨:٠٠ مساءً</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ SECTION 4: COUNTDOWN ══════════ -->
+    <section id="countdown">
+      <div class="reveal">
+        <p class="countdown-title">العد التنازلي</p>
+        <span class="clock-icon">⏱</span>
+        <h2 class="countdown-heading">حتى اللقاء</h2>
+        <div class="section-ornament">♥</div>
+
+        <div class="countdown-grid">
+          <div class="countdown-box">
+            <span class="countdown-num" id="cd-secs">--</span>
+            <span class="countdown-label">ثانية</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-num" id="cd-mins">--</span>
+            <span class="countdown-label">دقيقة</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-num" id="cd-hours">--</span>
+            <span class="countdown-label">ساعة</span>
+          </div>
+          <div class="countdown-box">
+            <span class="countdown-num" id="cd-days">--</span>
+            <span class="countdown-label">يوم</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ SECTION 5: OUR STORY ══════════ -->
+    <section id="story">
+      <div class="reveal">
+        <p class="story-tag">Our Story</p>
+        <h2 class="story-title">قصتنا</h2>
+        <div class="story-hearts">♥ ♥ ♥</div>
+        <p class="story-text">
+          في لحظة بسيطة، التقت القلوب وتشابكت الأرواح،<br />
+          وكأن الزمن كان يُعدّ لهذه اللحظة منذ الأزل.<br />
+          مع كل يوم مرّ، ازداد الحبّ عمقاً والألفة دفئاً،<br />
+          حتى كان هذا اليوم المبارك الذي نجمع فيه أيدينا<br />
+          ونقول معاً:
+          <strong style="color: var(--cream)">نعم، إلى الأبد.</strong>
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════ SECTION 7: LOCATION MAP BTN ══════════ -->
+    <section id="location">
+      <div class="reveal">
+        <h2 class="location-title">موقع الحفل</h2>
+        <div class="divider" style="color: rgba(236, 231, 209, 0.5)">✦ ✦ ✦</div>
+
+        <div class="location-card">
+          <div class="location-icon">📍</div>
+          <p class="location-name">Le Palace Garden</p>
+          <p class="location-detail">٢٤ مارس ٢٠٢٦ — الساعة ٨:٠٠ مساءً</p>
+
+          <a
+            class="maps-btn"
+            href="https://maps.app.goo.gl/NN9Lt9c5PAsNp2VF7"
+            target="_blank"
+            rel="noopener"
+          >
+            📍 الاتجاه إلى المكان
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ SECTION 8: THANK YOU ══════════ -->
+    <section id="thankyou">
+      <div class="reveal">
+        <span class="thankyou-icon">♥</span>
+        <h2 class="thankyou-title">شكراً لكم</h2>
+        <div class="section-ornament">♥</div>
+        <p class="thankyou-text">
+          كلّ كلمات الشكر لا توفيكم حقّكم،<br />
+          فحضوركم معنا هو أغلى هديّة يمكن أن نتلقّاها في هذا اليوم.<br />
+          نسأل الله أن يجمعنا دائماً على خير وسعادة،<br />
+          وأن يبارك لكم في أوقاتكم وذويكم.
+        </p>
+
+        <div class="story-hearts">♥ ♥ ♥</div>
+
+        <div class="footer-names">أحمد <span class="amp">&amp;</span> منال</div>
+
+        <div class="footer-bar">٢٤ مارس ٢٠٢٦ · الزقازيق · مصر</div>
+      </div>
+    </section>
+
+    <script>
+      // ── Scroll to top on page load/refresh ──
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+      window.scrollTo(0, 0);
+
+      // ── Countdown Timer ──
+      const weddingDate = new Date("2026-03-24T20:00:00");
+
+      function updateCountdown() {
+        const now = new Date();
+        const diff = weddingDate - now;
+
+        if (diff <= 0) {
+          document.getElementById("cd-days").textContent = "0";
+          document.getElementById("cd-hours").textContent = "0";
+          document.getElementById("cd-mins").textContent = "0";
+          document.getElementById("cd-secs").textContent = "0";
+          return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        );
+        const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById("cd-days").textContent = String(days).padStart(
+          2,
+          "0",
+        );
+        document.getElementById("cd-hours").textContent = String(
+          hours,
+        ).padStart(2, "0");
+        document.getElementById("cd-mins").textContent = String(mins).padStart(
+          2,
+          "0",
+        );
+        document.getElementById("cd-secs").textContent = String(secs).padStart(
+          2,
+          "0",
+        );
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      // ── Scroll Reveal ──
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
